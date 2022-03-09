@@ -19,6 +19,7 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        export FLASK_ENV=development
         python -m pip install --upgrade pip
         pip install flake8 
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -31,6 +32,7 @@ jobs:
     - name: Test with unittest
       run:  |
         python -m unittest
+        echo $FLASK_ENV
 
   deploy:
     runs-on: ubuntu-latest
