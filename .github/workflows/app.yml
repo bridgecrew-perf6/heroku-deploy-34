@@ -31,7 +31,7 @@ jobs:
     - name: Test with unittest
       run:  |
         python -m unittest
-        echo {{ secrets.FLASK_ENV }}
+        echo ${{ secrets.FLASK_ENV }}
         echo 'hello'
 
   deploy:
