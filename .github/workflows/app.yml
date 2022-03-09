@@ -33,6 +33,7 @@ jobs:
       run:  |
         python -m unittest
         echo $FLASK_ENV
+        echo 'hello'
 
   deploy:
     runs-on: ubuntu-latest
